@@ -1,0 +1,31 @@
+{
+  "name": "nrh-facebook-graph",
+  "version": "0.0.1",
+  "description": "facebook graph graph for node-rest-helper",
+  "main": "./dist/index.js",
+  "scripts": {
+    "test": "env-cmd ./.env.local node_modules/.bin/mocha --ui bdd --compilers coffee:coffeescript/register test/",
+    "build": "./node_modules/.bin/coffee -o dist -c ./src",
+    "coffeelint": "./node_modules/.bin/coffeelint -c ./src",
+    "lint": "./node_modules/.bin/eslint -f table --cache dist",
+    "bump": "npm version patch -m 'Bump to %s' --force",
+    "preversion": "yarn coffeelint && yarn build && yarn test",
+    "version": "git add -A",
+    "postversion": "git push && git push --tags"
+  },
+  "author": "georgzoeller",
+  "license": "MIT",
+  "engines": {
+    "node": ">=7.2.1"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "coffeelint": "^1.16.0",
+    "coffeelint-throw-inside-async": "^0.0.2",
+    "coffeescript": "^2",
+    "env-cmd": "^5.1.0",
+    "mocha": "^3.4.1",
+    "node-rest-helper": "georgzoeller/node-rest-helper",
+    "should": "^11.2.1"
+  }
+}
