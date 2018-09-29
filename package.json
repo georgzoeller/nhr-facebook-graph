@@ -1,6 +1,6 @@
 {
   "name": "nrh-facebook-graph",
-  "version": "0.0.2",
+  "version": "0.2.0",
   "description": "facebook graph graph for node-rest-helper",
   "main": "./dist/index.js",
   "scripts": {
@@ -16,13 +16,13 @@
   "author": "georgzoeller",
   "license": "MIT",
   "engines": {
-    "node": ">=7.2.1"
+    "node": ">=9.1.0"
   },
   "dependencies": {},
   "devDependencies": {
-    "coffeelint": "^1.16.0",
+    "coffeelint": "^2.1.0",
     "coffeelint-throw-inside-async": "^0.0.2",
-    "coffeescript": "^2",
+    "coffeescript": "^2.3.2",
     "env-cmd": "^5.1.0",
     "mocha": "^3.4.1",
     "node-rest-helper": "georgzoeller/node-rest-helper",
