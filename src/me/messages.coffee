@@ -99,6 +99,14 @@ module.exports  = (context) ->
       .setRecipient recipient
       .attachImageUrl url
 
+  sendVideo: (recipient, url) ->
+    context.customCall ChatMessageBuilder, endpoint: 'me/messages'
+      .describe "Sending video to #{recipient}: #{url}"
+      .setMethod 'POST'
+      .authorizeByToken()
+      .setRecipient recipient
+      .attachVideoUrl()url
+
   sendTemplate: (recipient, payload) ->
     context.customCall ChatMessageBuilder, endpoint: 'me/messages'
       .describe "Sending template to #{recipient}: #{payload}"

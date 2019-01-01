@@ -1,6 +1,6 @@
 {
   "name": "nrh-facebook-graph",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "facebook graph graph for node-rest-helper",
   "main": "./dist/index.js",
   "scripts": {
