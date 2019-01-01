@@ -143,6 +143,11 @@
           endpoint: 'me/messages'
         }).describe(`Sending image to ${recipient}: ${url}`).setMethod('POST').authorizeByToken().setRecipient(recipient).attachImageUrl(url);
       },
+      sendVideo: function(recipient, url) {
+        return context.customCall(ChatMessageBuilder, {
+          endpoint: 'me/messages'
+        }).describe(`Sending video to ${recipient}: ${url}`).setMethod('POST').authorizeByToken().setRecipient(recipient).attachVideoUrl(url);
+      },
       sendTemplate: function(recipient, payload) {
         return context.customCall(ChatMessageBuilder, {
           endpoint: 'me/messages'

@@ -105,7 +105,7 @@ module.exports  = (context) ->
       .setMethod 'POST'
       .authorizeByToken()
       .setRecipient recipient
-      .attachVideoUrl()url
+      .attachVideoUrl url
 
   sendTemplate: (recipient, payload) ->
     context.customCall ChatMessageBuilder, endpoint: 'me/messages'
