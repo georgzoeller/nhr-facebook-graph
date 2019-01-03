@@ -6,7 +6,7 @@ module.exports = (context) ->
       .describe "Requesting profile for user #{user_id}"
       .setMethod 'GET'
       .authorizeByToken()
-      .setFields ['id', 'first_name', 'last_name', 'profile_pic', 'locale', 'timezone', 'gender', 'is_payment_enabled']
+      .setFields ['id', 'first_name', 'last_name', 'profile_pic', 'locale', 'timezone', 'gender']
       .setResultsTransform ((profile) ->
         profile.picture = profile.profile_pic
         profile

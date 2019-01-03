@@ -1,7 +1,6 @@
 
 ALL_FIELDS = ['account_linking_url', 'persistent_menu', 'get_started', 'greeting',
-  'whitelisted_domains',
-  'payment_settings', 'target_audience', 'home_url']
+  'whitelisted_domains', 'target_audience', 'home_url']
 
 module.exports = (context) ->
 

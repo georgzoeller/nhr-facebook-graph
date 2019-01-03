@@ -2,7 +2,7 @@
 (function() {
   var ALL_FIELDS;
 
-  ALL_FIELDS = ['account_linking_url', 'persistent_menu', 'get_started', 'greeting', 'whitelisted_domains', 'payment_settings', 'target_audience', 'home_url'];
+  ALL_FIELDS = ['account_linking_url', 'persistent_menu', 'get_started', 'greeting', 'whitelisted_domains', 'target_audience', 'home_url'];
 
   module.exports = function(context) {
     return {

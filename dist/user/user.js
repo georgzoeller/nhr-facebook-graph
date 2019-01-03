@@ -5,7 +5,7 @@
       getProfile: function(user_id) {
         return context.createCall({
           endpoint: `${user_id}`
-        }).describe(`Requesting profile for user ${user_id}`).setMethod('GET').authorizeByToken().setFields(['id', 'first_name', 'last_name', 'profile_pic', 'locale', 'timezone', 'gender', 'is_payment_enabled']).setResultsTransform((function(profile) {
+        }).describe(`Requesting profile for user ${user_id}`).setMethod('GET').authorizeByToken().setFields(['id', 'first_name', 'last_name', 'profile_pic', 'locale', 'timezone', 'gender']).setResultsTransform((function(profile) {
           profile.picture = profile.profile_pic;
           return profile;
         }));
